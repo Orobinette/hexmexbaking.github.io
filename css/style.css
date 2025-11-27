@@ -17,10 +17,21 @@
     transition: .1s ease-in;
 }
 
+a{
+    text-decoration: none;
+}
+
 header{
-    padding-top: 1%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
     width: 80%;
     margin: auto;
+    padding: 1% 50px;
+}
+header h1:hover{
+    transform: translateY(3px);
 }
 
 body{
@@ -34,12 +45,18 @@ h1, h2, h3, p {
     color: var(--dark-color);
 }
 
+hr{
+    border-width: 1px;
+    border-style: solid;
+    color: var(--dark-color);
+}
+
 .bounding-box{
     background-color: var(--background-color);
     border: 10px;
     border-style: solid;
     border-color: var(--dark-color);
-    
+
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -58,9 +75,8 @@ h1, h2, h3, p {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    justify-content: center;
     outline-width: 0ch;
-
+    
     text-align: center;
     overflow-wrap: break-word;
 
@@ -72,8 +88,6 @@ h1, h2, h3, p {
     color: var(--background-color);
 }
 .nav hr{
-    border-width: 1px;
-    border-style: solid;
     border-color: var(--background-color);
 }
 
@@ -85,10 +99,10 @@ h1, h2, h3, p {
 
     align-content: center;
     font-size: 1.25em;
-
+    
     width: 100%;
     height: 50px;
-}
+}   
 .navdiv p{
     color: var(--dark-color);
 }
@@ -96,26 +110,63 @@ h1, h2, h3, p {
     transform: translateY(3px);
 }
 
-.recipediv{
+.recipe-container{
     width: 70%;
     display: flex;
+
     flex-direction: column;
     gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+.recipe-section h2{
+    padding-bottom: 10px;
 }
 
 .featdiv{
-    width: 100%;
-
-    border-color: var(--primary-color);
+    background-color: #fff;
+    border-color: var(--dark-color);
     border-style: solid;
+    box-shadow: 2px 2px 0px var(--dark-color);
+    
+    width: 100%;
+    height: 200px;
+}
+.featdiv p{
+    color: var(--dark-color);
+}
+.featdiv:hover{
+    transform: translateY(3px);
 }
 
-.seasondiv{
-    height: 100px;
+.recipe-section hr{
+    margin: 10px 0px;
+}
+
+.recipe-grid{
+    height: fit-content;
     width: 100%;
-    
-    border-color: var(--primary-color);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.recipe-thumbnail{
+    background-color: #fff;
     border-style: solid;
+    border-color: var(--dark-color);
+    box-shadow: 2px 2px 0px var(--dark-color);
+    
+    width: 100%;
+    height: 100px;
+}
+.recipe-thumbnail p{
+    color: var(--dark-color);
+}
+.recipe-thumbnail:hover{
+    transform: translateY(3px);
 }
 
 @media screen and (max-width: 768px) {
