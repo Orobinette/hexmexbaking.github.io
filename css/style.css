@@ -10,7 +10,6 @@
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 
-    list-style: none;
     box-sizing: border-box;
     margin: 0;
 
@@ -51,6 +50,10 @@ hr{
     color: var(--dark-color);
 }
 
+ul{
+    padding-left: 30px;
+}
+
 .bounding-box{
     background-color: var(--background-color);
     border: 10px;
@@ -60,6 +63,7 @@ hr{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: start;
 
     width: 80%;
     height: fit-content;
@@ -98,6 +102,7 @@ hr{
     box-shadow: 2px 2px 0px var(--dark-color);
 
     align-content: center;
+    text-align: center;
     font-size: 1.25em;
     
     width: 100%;
@@ -119,6 +124,10 @@ hr{
     justify-content: center;
     text-align: center;
 }
+.recipe-container h2, p{
+    color: var(--dark-color);
+}
+
 .recipe-section h2{
     padding-bottom: 10px;
 }
@@ -169,9 +178,61 @@ hr{
     transform: translateY(3px);
 }
 
+.recipe-card{
+    background-color: var(--primary-color);
+
+    width: 100%;
+    height: fit-content;
+    padding: 30px;
+    text-align: left;
+
+    border-style: solid;
+    border-color: var(--dark-color);
+    box-shadow: 2px 2px 0px var(--dark-color);
+}
+.recipe-card hr, p, ol, ul{
+    color: var(--background-color);
+}
+.recipe-card h2{
+    color: var(--background-color);
+    text-align: center;
+}
+
 @media screen and (max-width: 768px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+        padding-top: 20px;
+        width: 100%;
+    }
+
     .bounding-box{
         flex-direction: column;
+        width: 95%;
+        padding-top: 0px;
+        justify-content: center;
+        align-items: center;
     }
-    
+
+    .nav{
+        width: 100%;
+        border-radius: 0px;
+        border-style: none;
+    }
+ 
+    .recipe-container{
+        width: 95%;
+        padding: 0px;
+        padding-top: 30px;
+    }
+
+    .recipe-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hide-on-mobile{
+        display: none;
+    }
 }
