@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Hexmex Baking</title>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $.get("nav.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script> 
 </head>
 <body>
     <header>
@@ -12,18 +19,7 @@
         <img src="" alt="cauldron">
     </header>
     <div class="bounding-box">
-        <div class="nav">
-            <a href="recipes.html"><div class="navdiv"><p>Recipes</p></div></a>
-            <a href="baking-school.html"><div class="navdiv"><p>Baking school</p></div></a>
-            <a href="about.html"><div class="navdiv"><p>About me</p></div></a>
-            <div class="hide-on-mobile">
-                <hr>
-                <h3>Flavor text</h3>
-                <p>addfnalskdfj;askjf;asldkfja;ssklfjas;llkfjas;dkdlfjasd;lklfjasdf</p>
-                <hr>
-                <img src="" alt="something here">
-            </div>
-        </div>
+        <div id="nav-placeholder"></div>
         <div class="recipe-container">
             <div class="recipe-section">
                 <h2>Type</h2>

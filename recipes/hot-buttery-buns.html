@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Hexmex Baking</title>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $.get("../nav.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script> 
 </head>
 <body>
     <header>
@@ -12,78 +19,74 @@
         <img src="" alt="cauldron">
     </header>
     <div class="bounding-box">
-        <div class="nav">
-            <a href="recipes.html"><div class="navdiv"><p>Recipes</p></div></a>
-            <a href="baking-school.html"><div class="navdiv"><p>Baking school</p></div></a>
-            <a href="about.html"><div class="navdiv"><p>About me</p></div></a>
-        </div>
-    <div class="recipe-container">
-        <div class="recipe-card">
-            <h2>Overview</h2>
-            <br><hr><br>
-            <p><b>Prep Time:</b> 45 minutes</p>
-            <p><b>Proof time:</b> 2 hours</p>
-            <p><b>Cook time:</b> 15 minutes</p>
-            <p><b>Total time:</b> 3 hours</p>
-            <br><p><b>Yield:</b> 16 rolls</p>
-            <br>
-            <h2>Ingredients</h2>
-            <br><hr><br>
-            <p>Tangzhong</p>
-            <ul>
-                <li>70g milk*</li>
-                <li>70g water</li>
-                <li>25g flour</li>
-            </ul>
-            <br>
-            <p>Dough</p>
-            <ul>
-                <li>100g milk</li>
-                <li>100g water</li>
-                <li>25g sugar</li>
-                <li>1 package instant yeast</li>
+        <div id="nav-placeholder"></div>
+        <div class="recipe-container">
+            <div class="recipe-card">
+                <h2>Overview</h2>
+                <br><hr><br>
+                <p><b>Prep Time:</b> 45 minutes</p>
+                <p><b>Proof time:</b> 2 hours</p>
+                <p><b>Cook time:</b> 15 minutes</p>
+                <p><b>Total time:</b> 3 hours</p>
+                <br><p><b>Yield:</b> 16 rolls</p>
                 <br>
-                <li>425g bread flour</li>
-                <li>10g salt</li>
-                <li>2 tbsp butter, softened</li>
-            </ul>
-            <br>
-            <p>Topping</p>
-            <ul>
-                <li>3 tbsp melted butter*</li>
-                <li>Coarse salt</li>
-            </ul>
-            <br>
-            <h2>Directions</h2>
-            <br><hr><br>
-            <ol>
-                <li>Make the tangzhong</li>
+                <h2>Ingredients</h2>
+                <br><hr><br>
+                <p>Tangzhong</p>
+                <ul>
+                    <li>70g milk*</li>
+                    <li>70g water</li>
+                    <li>25g flour</li>
+                </ul>
+                <br>
+                <p>Dough</p>
+                <ul>
+                    <li>100g milk</li>
+                    <li>100g water</li>
+                    <li>25g sugar</li>
+                    <li>1 package instant yeast</li>
+                    <br>
+                    <li>425g bread flour</li>
+                    <li>10g salt</li>
+                    <li>2 tbsp butter, softened</li>
+                </ul>
+                <br>
+                <p>Topping</p>
+                <ul>
+                    <li>3 tbsp melted butter*</li>
+                    <li>Coarse salt</li>
+                </ul>
+                <br>
+                <h2>Directions</h2>
+                <br><hr><br>
                 <ol>
-                    <li>Add water, milk, and flour to a pot</li>
-                    <li>Whisk until no clumps remain</li>
-                    <li>Cook on medium heat, constantly stirring* until the mixture thickens into a porridge-like texture and the spoon creates streaks on the bottom of the pit</li>
+                    <li>Make the tangzhong</li>
+                    <ol>
+                        <li>Add water, milk, and flour to a pot</li>
+                        <li>Whisk until no clumps remain</li>
+                        <li>Cook on medium heat, constantly stirring* until the mixture thickens into a porridge-like texture and the spoon creates streaks on the bottom of the pit</li>
+                    </ol>
+                    <li>Combine tangzhong, milk, water, yeast, and sugar in a large bowl</li>
+                    <li>Add flour and salt </li>
+                    <li>Add butter</li> 
+                    <li>Knead 8-10 minutes</li>
+                    <li>Proof 1 hr</li>
+                    <li>Shape into 20 rolls and place in a 9x13 baking pan</li>
+                    <li>Preheat oven to 400 F and proof for another 30 m to 1 hr</li>
+                    <li>Brush with melted butter and sprinkle with sea salt</li>
+                    <li>Cook for 13-15 minutes (broiler for last 2 minutes for a more golden top)*</li>
                 </ol>
-                <li>Combine tangzhong, milk, water, yeast, and sugar in a large bowl</li>
-                <li>Add flour and salt </li>
-                <li>Add butter</li> 
-                <li>Knead 8-10 minutes</li>
-                <li>Proof 1 hr</li>
-                <li>Shape into 20 rolls and place in a 9x13 baking pan</li>
-                <li>Preheat oven to 400 F and proof for another 30 m to 1 hr</li>
-                <li>Brush with melted butter and sprinkle with sea salt</li>
-                <li>Cook for 13-15 minutes (broiler for last 2 minutes for a more golden top)*</li>
-            </ol>
-            <br>
-            <h2>Notes</h2>
-            <br><hr><br>
-            <ul>
-                <li>Non-dairy milks also work for tangzhong</li>
-                <li>I usually switch to a spoon while cooking tangzhong because the paste gets stuck in my whisk</li>
-                <li>I wash with melted butter to give a more buttery flavour and softer crust, which was my goal for this recipe. Other washes, like milk or egg, work as well, they'll just alter the color, flavor, and texture a little. </li>
-                <li>Butter wash naturally gets less brown, which is why I broil. If using egg wash, no need to broil</li>
+                <br>
+                <h2>Notes</h2>
+                <br><hr><br>
+                <ul>
+                    <li>Non-dairy milks also work for tangzhong</li>
+                    <li>I usually switch to a spoon while cooking tangzhong because the paste gets stuck in my whisk</li>
+                    <li>I wash with melted butter to give a more buttery flavour and softer crust, which was my goal for this recipe. Other washes, like milk or egg, work as well, they'll just alter the color, flavor, and texture a little. </li>
+                    <li>Butter wash naturally gets less brown, which is why I broil. If using egg wash, no need to broil</li>
 
-            </ul>
+                </ul>
+            </div>
         </div>
     </div>
-
 </div>
