@@ -8,19 +8,19 @@
 
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script>
-        $.get("nav.html", function(data){
+        $.get("/templates/head.html", function(data){
+            $("#head-placeholder").replaceWith(data);
+        });
+        $.get("/templates/nav.html", function(data){
             $("#nav-placeholder").replaceWith(data);
         });
     </script> 
 </head>
 <body>
-    <header>
-        <a href="index.html"><h1>Hexmex Baking</h1></a>
-        <img src="" alt="cauldron">
-    </header>
+    <div id="head-placeholder"></div>
     <div class="bounding-box">
         <div id="nav-placeholder"></div>
-        <div class="recipe-container">
+        <div class="content-box">
             <div class="recipe-section">
                 <h2>Type</h2>
                 <hr>

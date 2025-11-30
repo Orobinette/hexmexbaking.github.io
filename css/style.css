@@ -75,11 +75,16 @@ ul{
     background-color: var(--primary-color);
     border-style: solid;
     border-color: var(--dark-color);
+    outline-width: 0ch;
 
     display: flex;
     flex-direction: column;
     gap: 20px;
-    outline-width: 0ch;
+
+    top: 20px;
+    position: -webkit-sticky;
+    position: sticky;
+    align-self: flex-start;
     
     text-align: center;
     overflow-wrap: break-word;
@@ -115,7 +120,7 @@ ul{
     transform: translateY(3px);
 }
 
-.recipe-container{
+.content-box{
     width: 70%;
     display: flex;
 
@@ -124,7 +129,10 @@ ul{
     justify-content: center;
     text-align: center;
 }
-.recipe-container h2, p{
+.content-box h2{
+    color: var(--dark-color);
+}
+.content-box p{
     color: var(--dark-color);
 }
 
@@ -197,6 +205,24 @@ ul{
     color: var(--background-color);
     text-align: center;
 }
+.recipe-card ul, ol{
+    padding-bottom: 20px;
+}
+.print-button {
+    background-color: var(--background-color);
+    border-style: solid;
+    border-color: var(--dark-color);
+    box-shadow: 2px 2px 0px var(--dark-color);
+
+    width: 50px;
+    height: 50px;
+}
+.print-button:hover{
+    transform: translateY(3px);
+}
+.print-only{
+    display: none;
+}
 
 @media screen and (max-width: 768px) {
     header{
@@ -233,6 +259,43 @@ ul{
     }
 
     .hide-on-mobile{
+        display: none;
+    }
+}
+
+@media print{
+    h1{
+        color: #000;
+    }
+    header{
+        display: none;
+    }
+    .bounding-box{
+        width: 100%;
+        border-style: none;
+    }
+    .nav{
+        display: none;
+    }
+    .content-box{
+        width: 100%;
+    }
+    .content-box section{
+        display: none;
+    }
+    .recipe-card{
+        display: block;
+        border-color: #000;
+    }
+    .recipe-card h2, .recipe-card p, .recipe-card hr{
+        color: black;
+    }
+    .print-only{
+        text-align: center;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .print-button{
         display: none;
     }
 }
