@@ -4,100 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Hexmex Baking</title>
+    <title></title>
 
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/js/shared-content.js"></script> 
+    <script src="/js/create-recipe-content.js"></script>
     <script>
-        $.get("/templates/head.html", function(data){
-            $("#head-placeholder").replaceWith(data);
-        });
-        $.get("/templates/nav.html", function(data){
-            $("#nav-placeholder").replaceWith(data);
-        });
-    </script> 
-    <script>
-        function createContent(){
-            const listElement = document.getElementById('ingredients')
-            var data = [
-                "70g milk*", 
-                "70g water", 
-                "25g flour",
-                "100g milk",
-                "100g water",
-                "25g sugar",
-                "1 package instant yeast",
-                "425g bread flour",
-                "10g salt",
-                "2 tbsp butter, softened",
-                "3 tbsp melted butter*",
-                "Coarse salt",
-            ];
-            data.forEach(item => {
-                const listItem = document.createElement("li");
-                listItem.textContent = item;
-                listElement.appendChild(listItem);
-            });
-
-            listElement = document.getElementById('directions')
-            data = [
-                "To make the tangzhong, add water, milk, and flour to a pot and whisk until no clumps remain. Cook on medium heat, constantly stirring* until the mixture thickens into a porridge-like texture and the spoon creates streaks on the bottom of the pot.",
-                "Combine tangzhong, milk, water, yeast, and sugar in a large bowl, mix in flour and salt, then add butter.",
-                "Knead 8-10 minutes",
-                "Proof 1 hr",
-                "Shape into 15 rolls and place in a 9x13 baking pan",
-                "Preheat oven to 400 F and proof for another 30 m to 1 hr",
-                "Brush with melted butter and sprinkle with sea salt",
-                "Cook for 13-15 minutes (broiler for last 2 minutes for a more golden top)*",
-            ];
-            data.forEach(item => {
-                const listItem = document.createElement("li");
-                listItem.textContent = item;
-                listElement.appendChild(listItem);
-            });
-
-            listElement = document.getElementById('notes')
-            data = [
-                "Non-dairy milks also work for tangzhong",
-                "I usually switch to a spoon while cooking tangzhong because the paste gets stuck in my whisk",
-                "I wash with melted butter to give a more buttery flavour and softer crust, which was my goal for this recipe. Other washes, like milk or egg, work as well, they'll just alter the color, flavor, and texture a little. ",
-                "Butter wash naturally gets less brown, which is why I broil. If using egg wash, no need to broil",
-            ];
-            data.forEach(item => {
-                const listItem = document.createElement("li");
-                listItem.textContent = item;
-                listElement.appendChild(listItem);
-            });
-        }
+        const map = new Map();
+        map.set("title", "Hot Buttery Buns!");
+        map.set("flavor_text", "The perfect roll to go with your witches brew.");
+        map.set("img", "");
+        map.set("overview", "<p><b>Prep Time:</b> 45 minutes<br><b>Proof time:</b> 2 hours<br><b>Cook time:</b> 15 minutes<br><b>Total time:</b> 3 hours<br><br><b>Yield:</b> 15 rolls</p>");
+        map.set("ingredients", [
+            "70g milk*", 
+            "70g water", 
+            "25g flour",
+            "100g milk",
+            "100g water",
+            "25g sugar",
+            "1 package instant yeast",
+            "425g bread flour",
+            "10g salt",
+            "2 tbsp butter, softened",
+            "3 tbsp melted butter*",
+            "Coarse salt",
+        ]);
+        map.set("directions", [
+            "To make the tangzhong, add water, milk, and flour to a pot and whisk until no clumps remain. Cook on medium heat, constantly stirring* until the mixture thickens into a porridge-like texture and the spoon creates streaks on the bottom of the pot.",
+            "Combine tangzhong, milk, water, yeast, and sugar in a large bowl, mix in flour and salt, then add butter.",
+            "Knead 8-10 minutes",
+            "Proof 1 hr",
+            "Shape into 15 rolls and place in a 9x13 baking pan",
+            "Preheat oven to 400 F and proof for another 30 m to 1 hr",
+            "Brush with melted butter and sprinkle with sea salt",
+            "Cook for 13-15 minutes (broiler for last 2 minutes for a more golden top)*",
+        ]);
+        map.set("notes", [
+             "Non-dairy milks also work for tangzhong",
+            "I usually switch to a spoon while cooking tangzhong because the paste gets stuck in my whisk",
+            "I wash with melted butter to give a more buttery flavour and softer crust, which was my goal for this recipe. Other washes, like milk or egg, work as well, they'll just alter the color, flavor, and texture a little. ",
+            "Butter wash naturally gets less brown, which is why I broil. If using egg wash, no need to broil",
+        ]);
     </script>
 </head>
-<body>
+<body onload="createContent(map)">
     <div id="head-placeholder"></div>
     <div class="bounding-box">
         <div id="nav-placeholder"></div>
-        <div class="recipe-container">
-            <div class="recipe-card">
-                <h2>Overview</h2>
-                <br><hr><br>
-                <p><b>Prep Time:</b> 45 minutes</p>
-                <p><b>Proof time:</b> 2 hours</p>
-                <p><b>Cook time:</b> 15 minutes</p>
-                <p><b>Total time:</b> 3 hours</p>
-                <br><p><b>Yield:</b> 15 rolls</p>
-
-                <h2>Ingredients</h2>
-                <br><hr><br>
-                <ul id="ingredients"></ul>
-
-                <h2>Directions</h2>
-                <br><hr><br>
-                <ol id="directions"></ol>
-
-                <h2>Notes</h2>
-                <br><hr><br>
-                <ul id="notes"></ul>
-
-                <script>createContent();</script>
-            </div>
-        </div>
+        <div class="content-box" id="content"></div>
     </div>
-</div>
+</body>

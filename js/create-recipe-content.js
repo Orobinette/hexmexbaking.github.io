@@ -1,8 +1,32 @@
-function createContent(data, id){
-    const listElement = document.getElementById(id)
-    data.forEach(item => {
+$.get("/templates/recipe-template.html", function(data){
+    document.getElementById("content").innerHTML = data.toString();
+});
+
+function createContent(map){
+    const parser = new DOMParser();
+
+    document.title = "Hexmex Baking - " + map.get("title");
+    document.getElementById("title").innerHTML = map.get("title");
+    const italics = document.createElement('i');
+    italics.textContent = map.get("flavor_text");
+    document.getElementById("flavor-text").appendChild(italics);
+    document.getElementById("image").src = map.get("img");
+
+    const doc = parser.parseFromString(map.get("overview"), 'text/html');
+    document.getElementById("overview").replaceWith(doc.querySelector("p"));
+    map.get("ingredients").forEach(item => {
         const listItem = document.createElement("li");
         listItem.textContent = item;
-        listElement.appendChild(listItem);
+        document.getElementById("ingredients").appendChild(listItem);
+    });
+    map.get("directions").forEach(item => {
+        const listItem = document.createElement("li");
+        listItem.textContent = item;
+        document.getElementById("directions").appendChild(listItem);
+    });
+    map.get("notes").forEach(item => {
+        const listItem = document.createElement("li");
+        listItem.textContent = item;
+        document.getElementById("notes").appendChild(listItem);
     });
 }
