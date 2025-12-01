@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title></title>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/js/shared-content.js"></script> 
+    <script src="/js/create-recipe-content.js"></script>
+    <script>
+        const map = new Map();
+        map.set("title", "Pumpkin Sourdough Focaccia");
+        map.set("flavor_text", "");
+        map.set("img", "");
+        map.set("overview", "<p>Makes 1 800g loaf<br><b>Active prep time:</br> 1 hour<br><b>Proof time:</b> 15 hours<br><b>Cook time:</b> 40 minutes<br><b>Total time:</b> 18 hours");
+        map.set("ingredients", [
+            "-100g fed sourdough starter at its peak ",
+            "-100g pumpkin puree ",
+            "-25g brown sugar",
+            "-2 1/2 tsp pumpkin pie spice",
+            "-200g water ",
+            "-500g bread flour ",
+            "",
+            "-3.5g instant yeast (1/2 package)*",
+            "-10g salt",
+            "-40g water",
+            "-10g olive oil ",
+        ]);
+        map.set("directions", [
+            "Mix sourdough starter, pumpkin puree, sugar, spices, and 200g water in a large bowl. Then add the flour.",
+            "Autolyse: let rest for 45 minutes",
+            "Add salt, yeast, olive oil, and remaining 30g water to the dough. ",
+            "Knead or slap and fold for 5 minutes",
+            "Let rest for 30 minutes, then stretch and fold. Repeat x 2 for a total of 1.5 hours. ",
+            "Proof for at least 1.5 hours or until doubled in size",
+            "Shape and place in the pan. Let prove in the fridge overnight",
+            "Preheat oven to 430F, then dimple focaccia and bake straight from fridge for 20 minutes",
+        ]);
+        map.set("notes", [
+            "I use instant yeast for a shorter rise time and subtler sourdough flavor, but you can easily do this as a 100% sourdough loaf. If omitting yeast, no need to slap and fold, just add more stretch and folds if needed "
+        ]);
+    </script>
+</head>
+<body onload="createContent(map)">
+    <div id="head-placeholder"></div>
+    <div class="bounding-box">
+        <div id="nav-placeholder"></div>
+        <div class="content-box" id="content"></div>
+    </div>
+</body>

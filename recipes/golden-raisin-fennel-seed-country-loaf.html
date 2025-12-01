@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title></title>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/js/shared-content.js"></script> 
+    <script src="/js/create-recipe-content.js"></script>
+    <script>
+        const map = new Map();
+        map.set("title", "Golden Raisin Fennel Seed Country Loaf");
+        map.set("flavor_text", "");
+        map.set("img", "");
+        map.set("overview", "<p><b>Yield:</b> 1 loaf<br><b>Prep time:</b> 1 hour<br><b>Proof time:</b> 3.5 hrs (+ overnight preferment)<br><b>Bake time:</b> 40 min<br><b>Total time:</b> 5 hrs 10 min</p>");
+        map.set("ingredients", [
+            "-100g ripe starter",
+            "-300g semolina flour",
+            "-200g bread flour",
+            "-350g water",
+            "",
+            "-25g water",
+            "-10g salt",
+            "-1/2 tsp yeast",
+            "-2 tsp fennel seeds, toasted and crushed",
+            "-½ tsp coriander seeds, toasted and crushed",
+            "-2g orange zest",
+            "-75g golden raisins",
+        ]);
+        map.set("directions", [
+            "Make the levain: The night before baking, combine 15g discard, 100g flour, and 100g water and let rest on counter overnight.",
+            "The next morning, mix levain with 350g water, then add 500g flour. ",
+            "Rest for 45 minutes. During this time soak the raisins in warm water, toast the seeds in a pan, and grind the seeds into a powder. (If using active dry yeast, bloom in remaining 25g water now)",
+            "Add yeast, fennel seeds, coriander seeds, salt, orange zest, and 25g water to dough ",
+            "Slap and fold for 5 min.",
+            "Proof for 2 hours. For the first hour, stretch and fold every 20 minutes. (3 stretch and folds total)",
+            "Preshape on counter",
+            "Bench rest 45 minutes",
+            "Shape, place in bannetons, then let rest in fridge overnight",
+            "Next morning, preheat oven to 500F with Dutch oven inside for 45 minutes",
+            "Lower oven temp to 450F. Take out loaf, score, and place in oven",
+            "Bake with lid on for 20 minutes, then bake with lid off for 20 minutes",
+            "Cool for 1 hour",
+
+        ]);
+        map.set("notes", [
+            "In a pinch, you may bake immediately after the bench rest. It sacrifices flavor for time"
+        ]);
+    </script>
+</head>
+<body onload="createContent(map)">
+    <div id="head-placeholder"></div>
+    <div class="bounding-box">
+        <div id="nav-placeholder"></div>
+        <div class="content-box" id="content"></div>
+    </div>
+</body>

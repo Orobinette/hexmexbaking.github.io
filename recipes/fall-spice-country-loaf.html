@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title></title>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/js/shared-content.js"></script> 
+    <script src="/js/create-recipe-content.js"></script>
+    <script>
+        const map = new Map();
+        map.set("title", "Fall Spice Country Loaf");
+        map.set("flavor_text", "");
+        map.set("img", "");
+        map.set("overview", "<p><b>Yield:</b> 1 loaf<br><b>Prep time:</b> 1 hour<br><b>Proof time:</b> 3.5 hrs (+ overnight preferment)<br><b>Bake time:</b> 40 min<br><b>Total time:</b> 5 hrs 10 min</p>");
+        map.set("ingredients", [
+            "-100g pumpkin puree",
+            "-100g sourdough starter ",
+            "-200g water",
+            "-25g brown sugar",
+            "-50g semolina flour",
+            "-50g buckwheat flour",
+            "-50g wheat flour",
+            "-350g bread flour",
+            "-4g instant yeast",
+            "",
+            "-10g salt",
+            "-3 tsp pumpkin spice",
+            "-1/2 tsp cocoa powder",
+            "-1 tsp crushed fennel seeds",
+            "-50g water",
+        ]);
+        map.set("directions", [
+            "Mix pumpkin puree, sourdough starter, sugar, and water in a large bowl. Then add the flours.",
+            "Proof 45 minutes.",
+            "Add remaining ingredients.",
+            "Knead or slap and fold 5 minutes.",
+            "Proof for 2 hours. For the first hour, stretch and fold every 20 minutes. (3 stretch and folds total)",
+            "Preshape on counter",
+            "Bench rest 45 minutes",
+            "Shape, place in bannetons, then let rest in fridge overnight",
+            "Next morning, preheat oven to 500F with Dutch oven inside for 45 minutes",
+            "Lower oven temp to 450F. Take out loaf, score, and place in oven",
+            "Bake with lid on for 20 minutes, then bake with lid off for 20 minutes",
+            "Cool for 1 hour",
+        ]);
+        map.set("notes", [
+            "In a pinch, you may bake immediately after the bench rest. It sacrifices flavor for time"
+        ]);
+    </script>
+</head>
+<body onload="createContent(map)">
+    <div id="head-placeholder"></div>
+    <div class="bounding-box">
+        <div id="nav-placeholder"></div>
+        <div class="content-box" id="content"></div>
+    </div>
+</body>

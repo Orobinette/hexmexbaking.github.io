@@ -15,9 +15,22 @@ function createContent(map){
     const doc = parser.parseFromString(map.get("overview"), 'text/html');
     document.getElementById("overview").replaceWith(doc.querySelector("p"));
     map.get("ingredients").forEach(item => {
-        const listItem = document.createElement("li");
-        listItem.textContent = item;
-        document.getElementById("ingredients").appendChild(listItem);
+        if(item.charAt(0) == "-"){
+            const listItem = document.createElement("li");
+            listItem.textContent = item.slice(1);
+            document.getElementById("ingredients").appendChild(listItem);
+        }
+        else if(item == ""){
+            const brItem = document.createElement("br");
+            document.getElementById("ingredients").appendChild(brItem);
+        }
+        else{
+            const pItem = document.createElement("p");
+            pItem.textContent = item;
+            document.getElementById("ingredients").appendChild(pItem);
+            const brItem = document.createElement("br");
+            document.getElementById("ingredients").appendChild(brItem);
+        }
     });
     map.get("directions").forEach(item => {
         const listItem = document.createElement("li");

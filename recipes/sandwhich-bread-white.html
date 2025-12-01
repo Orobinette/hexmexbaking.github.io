@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title></title>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/js/shared-content.js"></script> 
+    <script src="/js/create-recipe-content.js"></script>
+    <script>
+        const map = new Map();
+        map.set("title", "White Sandwhich Bread");
+        map.set("flavor_text", "");
+        map.set("img", "");
+        map.set("overview", [
+            "Makes 1 850g loaf",
+            "Active prep time: 1 hour",
+            "Proof time: 3.5 hours + overnight ferment",
+            "Cooking time: 30-40 minutes",
+            "Total Time: 5 hours + overnight ferment",
+        ]);
+        map.set("ingredients", [
+            "200g water (warm)",
+            "60g milk (warm)",
+            "80g sourdough discard",
+            "25g sugar",
+            "56g vegetable oil",
+            "300g bread flour",
+            "80g rye flour",
+            "10g salt",
+        ]);
+        map.set("directions", [
+            "Warm water and milk in a pot",
+            "Combine, water, milk, sourdough discard, sugar, and yeast",
+            "In a separate bowl, combine both flours and salt",
+            "Add vegetable oil to the wet mixture, then combine the wet and dry mixtures",
+            "Knead dough for 10 minutes",
+            "Proof 1 hr",
+            "Shape, place in a pullman pan, and brush with top milk, and cover with lid.",
+            "Proof 1 hr",
+            "Preheat the oven to 350 F. Bake for 20 minutes with lid on, then 10 minutes with lid off",
+        ]);
+        map.set("notes", []);
+    </script>
+</head>
+<body onload="createContent(map)">
+    <div id="head-placeholder"></div>
+    <div class="bounding-box">
+        <div id="nav-placeholder"></div>
+        <div class="content-box" id="content"></div>
+    </div>
+</body>

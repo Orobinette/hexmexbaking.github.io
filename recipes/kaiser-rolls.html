@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title></title>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/js/shared-content.js"></script> 
+    <script src="/js/create-recipe-content.js"></script>
+    <script>
+        const map = new Map();
+        map.set("title", "Kaiser Rolls");
+        map.set("flavor_text", "");
+        map.set("img", "");
+        map.set("overview", [
+            "Yield: 6 rolls",
+            "Proof time: 2 hours",
+            "Cook time: 15 min",
+            "Total time: 2 ½ hours",
+        ]);
+        map.set("ingredients", [
+            "Wet mixture:",
+            "-310g bread flour",
+            "-8g salt",
+            "-1 + 1/2 tsp yeast",
+            "",
+            "Dry mixture:",
+            "-100g Sourdough discard",
+            "-120g water",
+            "-1 tsp black strap molasses ",
+            "-2 tbsp oil",
+        ]);
+        map.set("directions", [
+            "Mix wet, mix dry, combine",
+            "Knead 10 minutes ",
+            "Rest 1 hour",
+            "Shape into 6 rolls",
+            "Rest 45 min to 1 hour",
+            "Preheat to 425F",
+            "Brush with egg wash and add toppings",
+            "Bake 15-17 min",
+        ]);
+        map.set("notes", []);
+    </script>
+</head>
+<body onload="createContent(map)">
+    <div id="head-placeholder"></div>
+    <div class="bounding-box">
+        <div id="nav-placeholder"></div>
+        <div class="content-box" id="content"></div>
+    </div>
+</body>

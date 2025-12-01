@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title></title>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/js/shared-content.js"></script> 
+    <script src="/js/create-recipe-content.js"></script>
+    <script>
+        const map = new Map();
+        map.set("title", "English Muffins");
+        map.set("flavor_text", "");
+        map.set("img", "");
+        map.set("overview", "");
+        map.set("ingredients", [
+            "Wet mixture",
+            "-1/2 cup milk (113g)",
+            "-1/4 water (56g)",
+            "-1 tbsp oil or butter",
+            "-100g sourdough discard",
+            "",
+            "Dry mixture",
+            "-10oz / 284g flour ",
+            "-1 package instant yeast",
+            "-1/4 tsp salt",
+            "-1 + 1/2 tsp sugar (optional)",
+            "",
+            "Misc.",
+            "-Cornmeal for dusting",
+        ]);
+        map.set("directions", [
+            "Wet ingredients",
+            "Mix dry ingredients",
+            "Combine wet and dry mixtures",
+            "Slap and fold / knead for 10 minutes",
+            "Proof for 1 - 1 ½ hours till x2 size",
+            "Line baking sheet with parchment paper and dust with cornmeal",
+            "Shape dough into 6 boules and dust top with cornmeal",
+            "Proof 45 minutes - 1 hour till boules puff up and out",
+            "Heat a cast iron or non-stick and cook muffins for 5 minutes on each side. Gently press muffin into disc after flipping",
+        ]);
+        map.set("notes", []);
+    </script>
+</head>
+<body onload="createContent(map)">
+    <div id="head-placeholder"></div>
+    <div class="bounding-box">
+        <div id="nav-placeholder"></div>
+        <div class="content-box" id="content"></div>
+    </div>
+</body>

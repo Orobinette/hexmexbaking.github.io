@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title></title>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="/js/shared-content.js"></script> 
+    <script src="/js/create-recipe-content.js"></script>
+    <script>
+        const map = new Map();
+        map.set("title", "Multigrain Sandwich Bread");
+        map.set("flavor_text", "");
+        map.set("img", "");
+        map.set("overview", [
+            "Makes 1 850g loaf",
+            "",
+            "Day 1: Prep poolish and soaker and ferment overnight.",
+            "Day 2: Make dough and bake.",
+            "",
+            "Active prep time: 1 hour",
+            "Proof time: 3.5 hours + overnight ferment",
+            "Cooking time: 30-40 minutes",
+            "Total Time: 5 hours + overnight ferment",
+        ]);
+        map.set("ingredients", [
+            "Multigrain flour (20g each):",
+            "Whole wheat flour",
+            "Quinoa",
+            "Brown rice",
+            "Cornmeal",
+            "Pearl barley",
+            "Rolled oats",
+            "",
+            "Soaker",
+            "140g water",
+            "30g milk*",
+            "105 g multigrain flour",
+            "",
+            "Poolish",
+            "170g wheat flour",
+            "120g water",
+            "30g milk*",
+            "A pinch of instant yeast",
+            "",
+            "Dough",
+            "225g bread flour ",
+            "9g salt",
+            "3g instant yeast",
+            "20g brown sugar",
+            "255g soaker",
+            "320g poolish",
+            "1 tbsp vinegar *If using buttermilk, omit",
+            "20g honey",
+            "",
+            "Topping",
+            "1 egg for egg wash ",
+            "1 tbsp water for egg wash",
+            "Oats or seeds",
+        ]);
+        map.set("directions", [
+            "Day one",
+            "-Grind ingredients for the multigrain flour in a blender or food processor ",
+            "-Mix ingredients for the soaker. Leave on countertop overnight",
+            "-Mix ingredients for the poolish. Leave on countertop for 2-4 hours and then place in fridge overnight",
+            "",
+            "Day two",
+            "-Take poolish out of the fridge 1 hour before mixing dough",
+            "-Mix dough ingredients in a large bowl",
+            "-Knead dough on countertop for 10-12 minutes or until the dough passes the windowpane test.",
+            "-Proof dough on counter for 2 hours or until doubled in size.",
+            "-Shape dough and place in a 9 inch Pullman pan or loaf pan",
+            "-Make egg wash by whisking 1 egg with 1 tbsp of water. Brush on top of the dough and sprinkle with toppings.",
+            "-Proof for 1.5 hours",
+            "-Preheat oven to 350°F",
+            "-Bake for 30-40 minute",
+            "-Remove from the pan and let cool for at least an hour on a cooling rack before slicing.",
+        ]);
+        map.set("notes", [
+            "It should be possible to make multigrain flour with any combination of blended grains.",
+            "Milk can be replaced with buttermilk or milk alternatives. If using buttermilk, omit vinegar",
+        ]);
+    </script>
+</head>
+<body onload="createContent(map)">
+    <div id="head-placeholder"></div>
+    <div class="bounding-box">
+        <div id="nav-placeholder"></div>
+        <div class="content-box" id="content"></div>
+    </div>
+</body>
