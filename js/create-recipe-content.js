@@ -26,16 +26,29 @@ function createContent(map){
         }
         else{
             const pItem = document.createElement("p");
-            pItem.textContent = item;
+            const u = document.createElement("u");
+            pItem.appendChild(u);
+            u.textContent = item;
             document.getElementById("ingredients").appendChild(pItem);
-            const brItem = document.createElement("br");
-            document.getElementById("ingredients").appendChild(brItem);
         }
     });
     map.get("directions").forEach(item => {
-        const listItem = document.createElement("li");
-        listItem.textContent = item;
-        document.getElementById("directions").appendChild(listItem);
+        if(item.charAt(0) == "-"){
+            const listItem = document.createElement("li");
+            listItem.textContent = item.slice(1);
+            document.getElementById("directions").appendChild(listItem);
+        }
+        else if(item == ""){
+            const brItem = document.createElement("br");
+            document.getElementById("directions").appendChild(brItem);
+        }
+        else{
+            const pItem = document.createElement("p");
+            const u = document.createElement("u");
+            pItem.appendChild(u);
+            u.textContent = item;
+            document.getElementById("directions").appendChild(pItem);
+        }
     });
     map.get("notes").forEach(item => {
         const listItem = document.createElement("li");

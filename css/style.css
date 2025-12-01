@@ -202,6 +202,7 @@ ul{
 }
 .recipe-card hr, .recipe-card p, .recipe-card ol, .recipe-card ul{
     color: var(--background-color);
+    margin-left: 0;
 }
 .recipe-card h1{
     text-align: center;
@@ -211,8 +212,12 @@ ul{
     color: var(--background-color);
     text-align: center;
 }
-.recipe-card ul, ol{
+.recipe-card ul, .recipe-card ol{
     padding-bottom: 20px;
+}
+.recipe-card li{
+    margin-left: 20px;
+
 }
 .print-button {
     background-color: var(--background-color);
