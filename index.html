@@ -7,14 +7,7 @@
     <title>Hexmex Baking</title>
 
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script>
-        $.get("/templates/head.html", function(data){
-            $("#head-placeholder").replaceWith(data);
-        });
-        $.get("/templates/nav.html", function(data){
-            $("#nav-placeholder").replaceWith(data);
-        });
-    </script>  
+    <script src="/js/shared-content.js"></script> 
 </head>
 <body>
     <div id="head-placeholder"></div>
@@ -23,20 +16,14 @@
         <div class="content-box">
             <div class="recipe-section">
                 <h2>Featured</h2>
-                <a href="/recipes/golden-raisin-fennel-seed-country-loaf.html"><div class="featdiv">
-                    <img src="" alt="featured recipe">
-                    <p>(Title)</p>
-                </div></a>
+                <a href="/recipes/golden-raisin-fennel-seed-country-loaf.html"><div class="featdiv"><p>Golden Raisin Fennel Seed Country Loaf</p></div></a>
             </div>
             <div class="recipe-section">
                 <h2>What's in season?</h2>
                 <div class="recipe-grid">
-                    <div class="recipe-thumbnail"></div>
-                    <div class="recipe-thumbnail"></div>
-                    <div class="recipe-thumbnail"></div>
-                    <div class="recipe-thumbnail"></div>
-                    <div class="recipe-thumbnail"></div>
-                    <div class="recipe-thumbnail"></div>
+                    <a href="/recipes/fall-spice-country-loaf.html"><div class="recipe-thumbnail"><p>Fall spice Country Loaf</p></div></a>
+                    <a href="/recipes/focaccia-pumpkin.html"><div class="recipe-thumbnail"><p>Pumpkin Focaccia</p></div></a>
+                    <a href="/recipes/golden-raisin-fennel-seed-country-loaf.html"><div class="recipe-thumbnail"><p>Golden Raisin Fennel Seed Country Loaf</p></div></a>
                 </div>
             </div>
         </div>

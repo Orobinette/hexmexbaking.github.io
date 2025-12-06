@@ -7,14 +7,7 @@
     <title>Hexmex Baking</title>
 
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script>
-        $.get("/templates/head.html", function(data){
-            $("#head-placeholder").replaceWith(data);
-        });
-        $.get("/templates/nav.html", function(data){
-            $("#nav-placeholder").replaceWith(data);
-        });
-    </script> 
+    <script src="/js/shared-content.js"></script> 
 </head>
 <body>
     <div id="head-placeholder"></div>
